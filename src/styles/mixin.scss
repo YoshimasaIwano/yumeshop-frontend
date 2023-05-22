@@ -1,0 +1,15 @@
+// ブレイクポイントを指定
+$pc: 1152px;
+$tb: 767px;
+
+@mixin pc {
+  @media screen and (width >= $pc) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and ($tb < width < $pc) {
+    @content;
+  }
+}
