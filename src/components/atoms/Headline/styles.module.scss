@@ -1,0 +1,11 @@
+@use "../../../styles/mixin.scss";
+@use "../../../styles/variables.module.scss" as variables;
+
+.headline {
+    font-size: 1.5rem;
+    color: variables.$black;
+    line-height: 1.5;
+    @include mixin.pc {
+        font-size: 2rem;
+    }
+}
