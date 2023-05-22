@@ -1,0 +1,19 @@
+@use "../../../styles/mixin.scss";
+@use "../../../styles/variables.module.scss" as variables;
+
+.card_text {
+    color: variables.$black;
+    padding: 0 0.5rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    width: 100%;
+    word-wrap: break-word;
+    @include mixin.pc {
+        padding: 0.5rem 0.5rem;
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+    }
+}
