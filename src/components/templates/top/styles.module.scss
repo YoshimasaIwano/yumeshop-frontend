@@ -1,0 +1,27 @@
+@use '../../../styles/mixin.scss';
+@use '../../../styles/variables.module.scss' as variables;
+
+.category_container {
+  background-color: inherit;
+  margin-left: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  @include mixin.tb {
+    margin-left: 2rem;
+  }
+  @include mixin.pc {
+    margin-left: 4rem;
+  }
+}
+
+.category_card_container {
+  display: flex;
+  overflow: scroll;
+  column-gap: 0.5rem;
+  @include mixin.pc {
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+}
