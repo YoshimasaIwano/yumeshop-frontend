@@ -5,7 +5,6 @@ export interface Category {
 }
 
 export async function fetchCategories(): Promise<Category[]> {
-  // process.env.NODE_ENV === 'development' && console.log('fetchCategories');
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
 
   // Check if the request was successful
