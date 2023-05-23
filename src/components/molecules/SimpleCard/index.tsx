@@ -17,6 +17,9 @@ export const SimpleCard: React.FC<SimpleCardProps> = ({ name, thumbnail }) => (
       alt={name} // TODO: APIから取得できないので、とりあえずnameを入れておく。
       className={styles.card_image}
     />
-    <CardText name={name} />
+    <div className={styles.card_text_contaier}>
+      <CardText name={name} />
+    </div>
+    
   </div>
 );

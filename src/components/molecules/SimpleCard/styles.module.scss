@@ -1,33 +1,39 @@
-@use "../../../styles/mixin.scss";
-@use "../../../styles/variables.module.scss" as variables;
+@use '../../../styles/mixin.scss';
+@use '../../../styles/variables.module.scss' as variables;
 
 .card_container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    border-radius: 8px;
-    width: 200px;
-    background: variables.$white;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    @include mixin.pc {
-        width: 244px;
-    }
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  border-radius: 8px;
+  width: 200px;
+  background: variables.$white;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  @include mixin.pc {
+    width: 244px;
+  }
 }
 
-
 .card_image {
-    background: variables.$gray;
-    color: variables.$gray;
-    width: 200px;
-    height: 200px;
-    border-radius: 8px 8px 0px 0px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    @include mixin.pc {
-        width: 244px;
-        height: 244px;
-    }
+  background: variables.$gray;
+  color: variables.$gray;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  @include mixin.pc {
+    width: 244px;
+    height: 244px;
+  }
+}
+
+.card_text_container {
+  padding: 0 0.5rem;
+  @include mixin.pc {
+    padding: 0.5rem 0.5rem;
+  }
 }
