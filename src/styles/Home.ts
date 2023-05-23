@@ -6,7 +6,6 @@ export const TokenTest = styled.div`
 `;
 
 export const Container = styled.div`
-  // padding: 0 2rem;
 `;
 
 export const Main = styled.main`
