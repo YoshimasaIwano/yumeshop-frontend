@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   background: ${colors.YumeWhiteGreen};
-  // min-height: 100vh;
+  min-height: 100vh;
   // padding: 4rem 0;
   // flex: 1;
   // display: flex;
