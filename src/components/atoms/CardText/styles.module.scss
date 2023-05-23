@@ -3,17 +3,11 @@
 
 .card_text {
   color: variables.$black;
-  font-weight: 400;
   font-size: 0.75rem;
-  line-height: 1.0625rem;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  width: 100%;
+  line-height: 1.5;
   word-wrap: break-word;
   @include mixin.pc {
     font-size: 1.125rem;
-    line-height: 1.625rem;
   }
 }
 

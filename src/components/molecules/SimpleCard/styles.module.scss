@@ -2,11 +2,9 @@
 @use '../../../styles/variables.module.scss' as variables;
 
 .card_container {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
   border-radius: 8px;
   width: 200px;
   background: variables.$white;
@@ -22,9 +20,6 @@
   width: 200px;
   height: 200px;
   border-radius: 8px 8px 0px 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   @include mixin.pc {
     width: 244px;
     height: 244px;
@@ -33,6 +28,7 @@
 
 .card_text_container {
   padding: 0 0.5rem;
+  width: 100%;
   @include mixin.pc {
     padding: 0.5rem 0.5rem;
   }
