@@ -4,37 +4,14 @@ import { SimpleCard } from './index';
 const meta: Meta<typeof SimpleCard> = {
   title: 'molecules/SimpleCard',
   component: SimpleCard,
-  argTypes: {
-    SimpleCardTypes: {
-      control: { type: 'radio' },
-      options: ['small', 'middle', 'large'],
-    },
-  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof SimpleCard>;
 
-export const Large: Story = {
+export const Index: Story = {
   args: {
-    SimpleCardTypes: 'large',
-    name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
-    thumbnail: '',
-  },
-};
-
-export const Middle: Story = {
-  args: {
-    SimpleCardTypes: 'middle',
-    name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
-    thumbnail: '',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    SimpleCardTypes: 'small',
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
     thumbnail: '',
   },

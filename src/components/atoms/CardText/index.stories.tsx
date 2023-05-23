@@ -5,9 +5,9 @@ const meta: Meta<typeof CardText> = {
   title: 'atoms/CardText',
   component: CardText,
   argTypes: {
-    CardTextTypes: {
+    size: {
       control: { type: 'radio' },
-      options: ['small', 'middle', 'large'],
+      options: ['medium', 'large'],
     },
   },
 };
@@ -18,21 +18,14 @@ type Story = StoryObj<typeof CardText>;
 
 export const Large: Story = {
   args: {
-    CardTextTypes: 'large',
+    size: 'large',
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
   },
 };
 
-export const Middle: Story = {
+export const Medium: Story = {
   args: {
-    CardTextTypes: 'middle',
-    name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    CardTextTypes: 'small',
+    size: 'medium',
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
   },
 };
