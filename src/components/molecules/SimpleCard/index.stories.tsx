@@ -13,6 +13,6 @@ type Story = StoryObj<typeof SimpleCard>;
 export const Index: Story = {
   args: {
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
-    thumbnail: '',
+    thumbnail: 'https://unsplash.it/244/244?random',
   },
 };
