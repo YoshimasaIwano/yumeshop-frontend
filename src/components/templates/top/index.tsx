@@ -5,7 +5,7 @@ import { Headline } from '../../atoms/Headline';
 import styles from './styles.module.scss';
 
 export function Top() {
-  const { data, isLoading, error } = useQuery<Category[]>(
+  const { data, isLoading, error } = useQuery<Category[], Error>(
     'categories',
     fetchCategories,
   );
@@ -15,7 +15,7 @@ export function Top() {
   }
 
   if (error) {
-    return <>An error has occurred: {error}</>;
+    return <>An error has occurred: {error.message}</>;
   }
 
   return (
