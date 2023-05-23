@@ -24,7 +24,7 @@ export const Large: Story = {
   },
 };
 
-export const Middle = {
+export const Middle: Story = {
   args: {
     SimpleCardTypes: 'middle',
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
@@ -32,7 +32,7 @@ export const Middle = {
   },
 };
 
-export const Small = {
+export const Small: Story = {
   args: {
     SimpleCardTypes: 'small',
     name: 'TextTextTextTextTextTextTextTextTextTextTextTextText',
