@@ -19,8 +19,8 @@ export function Top() {
   }
 
   return (
-    <div className={styles.category_container}>
-      <Headline label="カテゴリ" headlineTypes="small" />
+    <section className={styles.category_container}>
+      <Headline label="カテゴリ" headlineTypes="middle"/>
       <div className={styles.category_card_container}>
         {data?.map((category) => (
           <SimpleCard
@@ -30,6 +30,6 @@ export function Top() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

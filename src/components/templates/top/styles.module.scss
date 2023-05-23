@@ -2,7 +2,6 @@
 @use '../../../styles/variables.module.scss' as variables;
 
 .category_container {
-  background-color: inherit;
   margin-left: 1.125rem;
   display: flex;
   flex-direction: column;
@@ -12,6 +11,7 @@
   }
   @include mixin.pc {
     margin-left: 4rem;
+    margin-right: 4rem;
   }
 }
 
