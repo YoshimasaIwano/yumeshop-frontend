@@ -6,5 +6,17 @@ interface CardTextProps {
 }
 
 export const CardText: React.FC<CardTextProps> = ({ name, CardTextTypes }) => {
-  return <div className={styles.card_text}>{name}</div>;
+  return (
+    <>
+      {CardTextTypes === 'large' && (
+        <div className={styles.card_text}>{name}</div>
+      )}
+      {CardTextTypes === 'middle' && (
+        <div className={styles.card_text}>{name}</div>
+      )}
+      {CardTextTypes === 'small' && (
+        <div className={styles.card_text}>{name}</div>
+      )}
+    </>
+  );
 };
