@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 
-interface DatesProps {
+interface DateProps {
   date: string;
 }
 
@@ -16,8 +16,6 @@ function formatDate(dateStr: string): string {
   return `${year}/${month}/${date}`;
 }
 
-export const Dates: React.FC<DatesProps> = ({ date }) => (
-  <div className={clsx(styles.date_text)}>
-    {formatDate(date)}
-  </div>
+export const DateText: React.FC<DateProps> = ({ date }) => (
+  <div className={clsx(styles.date_text)}>{formatDate(date)}</div>
 );
