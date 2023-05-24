@@ -1,14 +1,11 @@
-import { useQuery } from 'react-query';
-import { Category, fetchCategories } from './fetcher';
-import { SimpleCard } from '../../molecules/SimpleCard';
-import { Headline } from '../../atoms/Headline';
+import Link from 'next/link';
+import { SimpleCard } from 'src/components/molecules/SimpleCard';
+import { Headline } from 'src/components/atoms/Headline';
+import { useCategories, Category } from 'src/hooks/useCategories';
 import styles from './styles.module.scss';
 
 export function Top() {
-  const { data, isLoading, error } = useQuery<Category[], Error>(
-    'categories',
-    fetchCategories,
-  );
+  const { data, isLoading, error } = useCategories();
 
   if (isLoading) {
     return <>Loading...</>;
@@ -20,14 +17,12 @@ export function Top() {
 
   return (
     <section className={styles.category_container}>
-      <Headline label="カテゴリ" headlineTypes="middle"/>
+      <Headline label="カテゴリ" headlineTypes="middle" />
       <div className={styles.category_card_container}>
-        {data?.map((category) => (
-          <SimpleCard
-            key={category.id}
-            name={category.name}
-            thumbnail={category.thumbnail}
-          />
+        {data?.map((category: Category) => (
+          <Link href={`/list/${category.id}`} key={category.id}>
+            <SimpleCard name={category.name} thumbnail={category.thumbnail} />
+          </Link>
         ))}
       </div>
     </section>

@@ -1,5 +1,7 @@
+import { useQuery } from 'react-query';
+
 export interface Category {
-  id: number;
+  id: string;
   name: string;
   thumbnail: string;
 }
@@ -7,10 +9,22 @@ export interface Category {
 export async function fetchCategories(): Promise<Category[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
 
-  // Check if the request was successful
   if (!res.ok) {
     throw new Error('Network response was not ok');
   }
 
   return res.json();
+}
+
+export function useCategories() {
+  const { data, isLoading, error } = useQuery<Category[], Error>(
+    'categories',
+    fetchCategories,
+  );
+
+  return {
+    data,
+    isLoading,
+    error,
+  };
 }
