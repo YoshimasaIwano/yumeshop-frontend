@@ -7,7 +7,7 @@ const meta: Meta<typeof Tags> = {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: ['red', 'orange'],
+      options: ['red', 'orange','yellow', 'mediumseagreen', 'skyblue', 'blue', 'purple'],
     },
   },
 };
@@ -16,23 +16,9 @@ export default meta;
 
 type Story = StoryObj<typeof Tags>;
 
-export const Red: Story = {
+export const Index: Story = {
   args: {
     color: 'red',
     name: '重要',
-  },
-};
-
-export const Orange: Story = {
-  args: {
-    color: 'orange',
-    name: 'メンテナンス',
-  },
-};
-
-export const Yellow: Story = {
-  args: {
-    color: 'yellow',
-    name: 'メンテナンス',
   },
 };
