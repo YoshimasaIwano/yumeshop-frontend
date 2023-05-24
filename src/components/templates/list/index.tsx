@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { Headline } from 'src/components/atoms/Headline';
-import { useCategories } from 'src/hooks/userCategories';
+import { useCategories } from 'src/hooks/useCategories';
 import styles from './styles.module.scss';
 
 export function List() {
@@ -26,7 +26,7 @@ export function List() {
   return (
     <div className={styles.category_page_container}>
       <Headline
-        label={`${selectedCategory?.name}一覧`}
+        label={`${selectedCategory.name}一覧`}
         headlineTypes="middle"
       />
     </div>

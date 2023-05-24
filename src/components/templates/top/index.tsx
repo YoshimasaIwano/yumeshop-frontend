@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SimpleCard } from 'src/components/molecules/SimpleCard';
 import { Headline } from 'src/components/atoms/Headline';
-import { useCategories, Category } from 'src/hooks/userCategories';
+import { useCategories, Category } from 'src/hooks/useCategories';
 import styles from './styles.module.scss';
 
 export function Top() {
@@ -21,10 +21,7 @@ export function Top() {
       <div className={styles.category_card_container}>
         {data?.map((category: Category) => (
           <Link href={`/list/${category.id}`} key={category.id}>
-            <SimpleCard
-              name={category.name}
-              thumbnail={category.thumbnail}
-            />
+            <SimpleCard name={category.name} thumbnail={category.thumbnail} />
           </Link>
         ))}
       </div>
