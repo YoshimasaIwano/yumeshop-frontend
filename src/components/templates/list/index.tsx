@@ -18,6 +18,10 @@ export function List() {
   }
 
   const selectedCategory = data?.find((category) => category.id === id);
+  if (!selectedCategory) {
+    //  TODO: 404ページを作成する
+    return <>Not Found</>;
+  }
 
   return (
     <div className={styles.category_page_container}>
