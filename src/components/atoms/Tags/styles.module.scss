@@ -3,6 +3,8 @@
 
 .tag_container {
   display: inline-block;
+  align-items: center;
+  margin: auto;
   font-size: 0.75rem;
   line-height: 1.5;
   @include mixin.pc {
