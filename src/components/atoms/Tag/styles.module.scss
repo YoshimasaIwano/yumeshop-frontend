@@ -1,0 +1,18 @@
+@use '../../../styles/mixin.scss';
+@use '../../../styles/variables.module.scss' as variables;
+
+.tag_container {
+  display: inline-block;
+  align-items: center;
+  margin: auto;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  @include mixin.pc {
+    font-size: 1.375rem;
+  }
+}
+
+.tag_name {
+  padding: 0px 4px;
+  color: variables.$white;
+}
