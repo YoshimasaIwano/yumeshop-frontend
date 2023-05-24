@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import Link from 'next/link';
 import { Category, fetchCategories } from './fetcher';
 import { SimpleCard } from '../../molecules/SimpleCard';
 import { Headline } from '../../atoms/Headline';
@@ -20,14 +21,15 @@ export function Top() {
 
   return (
     <section className={styles.category_container}>
-      <Headline label="カテゴリ" headlineTypes="middle"/>
+      <Headline label="カテゴリ" headlineTypes="middle" />
       <div className={styles.category_card_container}>
-        {data?.map((category) => (
-          <SimpleCard
+        {data?.map((category: Category) => (
+          <Link
+            href={`/category/${category.id}/${category.name}`}
             key={category.id}
-            name={category.name}
-            thumbnail={category.thumbnail}
-          />
+          >
+            <SimpleCard name={category.name} thumbnail={category.thumbnail} />
+          </Link>
         ))}
       </div>
     </section>
