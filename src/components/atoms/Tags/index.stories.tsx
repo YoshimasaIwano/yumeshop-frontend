@@ -7,7 +7,7 @@ const meta: Meta<typeof Tags> = {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: ['red', 'orange','yellow', 'mediumseagreen', 'skyblue', 'blue', 'purple'],
+      options: ['red', 'orange','yellow', 'mediumseagreen', 'skyblue', 'blue', 'purple','gray', 'magenta', 'pink', 'brown'], 
     },
   },
 };
